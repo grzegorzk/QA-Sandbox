@@ -1,0 +1,11 @@
+version: "3"
+services:
+  qa_test_app:
+    build: .
+    command: nginx -g 'daemon off;'
+    container_name: qa_test_app
+    ports:
+      - 8080:8080
+    ### Uncomment below if in development mode
+    #volumes:
+    #  - ./qa-test-app:/srv/http/qa-test-app
